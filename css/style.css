@@ -67,6 +67,18 @@ a {
   text-decoration: none;
 }
 
+.menu__link--active {
+  color: var(--primary-color);
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 60px;
+
+  color: var(--dark-color);
+}
+
 .title {
   margin: 0;
   font-weight: 700;
@@ -165,24 +177,28 @@ a {
   color: var(--dark-color);
 }
 
-.posts__details {
+.posts__details,
+.blog__details {
   display: flex;
 }
 
-.posts__details-cat {
+.posts__details-cat,
+.blog__details-cat {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.posts__details-time {
+.posts__details-time,
+.blog__details-time {
   position: relative;
   padding-right: 30px;
   margin-right: 26px;
 }
 
-.posts__details-time::after {
+.posts__details-time::after,
+.blog__details-time::after {
   position: absolute;
   right: 0;
   content: "";
@@ -191,12 +207,41 @@ a {
   background-color: var(--black);
 }
 
-.posts__details-cat-item::after {
+.posts__details-cat-item::after,
+.blog__details-cat-item::after {
   content: ",";
   margin-right: 8px;
 }
 
-.posts__details-cat-item:last-child::after {
+.blog__title {
+  margin-bottom: 55px;
+}
+
+.blog__details-cat-item {
+  color: var(--light-color);
+}
+
+.blog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog__item {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.blog__item-link {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--dark-color);
+}
+
+.posts__details-cat-item:last-child::after,
+.blog__details-cat-item:last-child::after {
   display: none;
 }
 
@@ -232,12 +277,44 @@ a {
   color: var(--dark-color);
 }
 
-.featured__item-details {
+.inner-content__top h1 {
+  margin-bottom: 30px;
+  width: 506px;
+  font-size: 34px;
+  line-height: 50px;
+  color: var(--dark-color);
+}
+
+.inner-content img {
+  width: 100%;
+}
+
+.inner-content h1 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.5;
+  color: var(--dark-color);
+}
+
+.inner-content h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--dark-color);
+}
+
+.featured__item-details,
+.inner-content__item-details {
   margin: 0;
   margin-bottom: 19px;
 }
 
-.featured__item-year {
+.inner-content__item-details {
+  margin-bottom: 23px;
+}
+
+.featured__item-year,
+.inner-content__item-year {
   padding: 0 10px;
   margin-right: 26px;
   font-weight: 900;
@@ -247,11 +324,20 @@ a {
   border-radius: 16px;
 }
 
-.featured__item-cat {
+.inner-content__item-year {
+  background-color: var(--primary-color);
+}
+
+.featured__item-cat,
+.inner-content__item-cat {
   font-size: 20px;
   line-height: 29px;
 
   color: var(--light-color);
+}
+
+.inner-content__item-cat {
+  color: var(--dark-color);
 }
 
 .featured__item-txt {
@@ -279,4 +365,57 @@ a {
 
 .socials__link:hover path {
   fill: var(--primary-color);
+}
+
+.cat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cat__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-image: url("https://images.unsplash.com/photo-1658830116676-198d5feb387e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.cat__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background-color: rgba(232, 4, 4, 0.407);
+  z-index: -1;
+}
+
+.cat__item-women {
+  background-image: url("https://images.unsplash.com/photo-1639269156548-6f80f4192f3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+.cat__item-another {
+  background-image: url("https://images.unsplash.com/photo-1658647362833-d4936fd1cb16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80");
+}
+
+.cat__link {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
 }
